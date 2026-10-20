@@ -6,7 +6,9 @@ It is a small prototype of an experiment-planning workflow, not a predictive mod
 
 ## Status
 
-Work in progress. The dataset and its documentation are complete. The Python functions and the main loop are being added step by step (see "Planned workflow").
+The dataset, the four core functions (`load_data`, `validate`, `powder_mass`, `suggest_params`), the main loop and the result-logging function are implemented in `agent_workflow.ipynb`. Running the notebook validates a set of example proposals (including two invalid ones), calculates powder masses, suggests scan speeds from the thesis data and saves the experiment plans to `experiment_plans.json`.
+
+`log_result()` shows the structure for recording outcomes. No real experiment results have been logged with it yet, so the repository contains no `results_log.csv`.
 
 ## Dataset
 
@@ -43,7 +45,7 @@ Outcomes were assigned by me from the observed defects. Row 6 (porosity only) is
 - Other process parameters (powder feed rate, beam diameter, overlap, shielding gas) are not included as columns.
 - The dataset is small and covers only one substrate and one alloy family, so it is meant to demonstrate the workflow, not to support general conclusions.
 
-## Planned workflow
+## Workflow
 
 1. `load_data()`: read the CSV with pandas.
 2. `validate(proposal)`: check that the proposed composition is valid (fractions sum to 1, only allowed elements).
