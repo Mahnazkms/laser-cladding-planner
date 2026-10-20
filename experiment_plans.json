@@ -1,0 +1,124 @@
+[
+  {
+    "proposal_id": 1,
+    "composition": {
+      "Fe": 0.23529411764705882,
+      "Co": 0.23529411764705882,
+      "Cr": 0.23529411764705882,
+      "Ni": 0.23529411764705882,
+      "Nb": 0.058823529411764705
+    },
+    "powder_mass_g_for_10g": {
+      "Fe": 2.246,
+      "Co": 2.37,
+      "Cr": 2.091,
+      "Ni": 2.36,
+      "Nb": 0.934
+    },
+    "suggestion": {
+      "requested_nb": 0.25,
+      "nearest_nb_in_data": 0.25,
+      "in_data_range": true,
+      "n_similar_experiments": 6,
+      "success_rate": 1.0,
+      "good_scan_speeds_mm_s": [
+        1.5,
+        2.1,
+        3.0,
+        3.33,
+        4.0,
+        4.0
+      ],
+      "laser_power_W": 280
+    }
+  },
+  {
+    "proposal_id": 2,
+    "composition": {
+      "Fe": 0.23255813953488372,
+      "Co": 0.23255813953488372,
+      "Cr": 0.23255813953488372,
+      "Ni": 0.23255813953488372,
+      "Nb": 0.06976744186046512
+    },
+    "powder_mass_g_for_10g": {
+      "Fe": 2.204,
+      "Co": 2.326,
+      "Cr": 2.052,
+      "Ni": 2.317,
+      "Nb": 1.1
+    },
+    "suggestion": {
+      "requested_nb": 0.3,
+      "nearest_nb_in_data": 0.25,
+      "in_data_range": true,
+      "n_similar_experiments": 6,
+      "success_rate": 1.0,
+      "good_scan_speeds_mm_s": [
+        1.5,
+        2.1,
+        3.0,
+        3.33,
+        4.0,
+        4.0
+      ],
+      "laser_power_W": 280
+    }
+  },
+  {
+    "proposal_id": 3,
+    "composition": {
+      "Fe": 0.2247191011235955,
+      "Co": 0.2247191011235955,
+      "Cr": 0.2247191011235955,
+      "Ni": 0.2247191011235955,
+      "Nb": 0.10112359550561797
+    },
+    "powder_mass_g_for_10g": {
+      "Fe": 2.089,
+      "Co": 2.205,
+      "Cr": 1.945,
+      "Ni": 2.196,
+      "Nb": 1.564
+    },
+    "suggestion": {
+      "requested_nb": 0.45,
+      "nearest_nb_in_data": 0.45,
+      "in_data_range": true,
+      "n_similar_experiments": 4,
+      "success_rate": 0.25,
+      "good_scan_speeds_mm_s": [
+        4.0
+      ],
+      "laser_power_W": 280
+    }
+  },
+  {
+    "proposal_id": 4,
+    "composition": {
+      "Fe": 0.2173913043478261,
+      "Co": 0.2173913043478261,
+      "Cr": 0.2173913043478261,
+      "Ni": 0.2173913043478261,
+      "Nb": 0.13043478260869565
+    },
+    "powder_mass_g_for_10g": {
+      "Fe": 1.986,
+      "Co": 2.096,
+      "Cr": 1.849,
+      "Ni": 2.087,
+      "Nb": 1.982
+    },
+    "suggestion": {
+      "requested_nb": 0.6,
+      "nearest_nb_in_data": 0.45,
+      "in_data_range": false,
+      "n_similar_experiments": 4,
+      "success_rate": 0.25,
+      "good_scan_speeds_mm_s": [
+        4.0
+      ],
+      "laser_power_W": 280
+    }
+  }
+]
