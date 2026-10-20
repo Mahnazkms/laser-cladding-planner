@@ -9,6 +9,7 @@ It is a small prototype of an experiment-planning workflow, not a predictive mod
 The dataset, the four core functions (`load_data`, `validate`, `powder_mass`, `suggest_params`), the main loop and the result-logging function are implemented in `agent_workflow.ipynb`. Running the notebook validates a set of example proposals (including two invalid ones), calculates powder masses, suggests scan speeds from the thesis data and saves the experiment plans to `experiment_plans.json`.
 
 `log_result()` shows the structure for recording outcomes. No real experiment results have been logged with it yet, so the repository contains no `results_log.csv`.
+A first LLM tool-calling demo is in `agent_demo.ipynb`.
 
 ## Dataset
 
@@ -54,9 +55,19 @@ Outcomes were assigned by me from the observed defects. Row 6 (porosity only) is
 5. Main loop: run several proposals through steps 2 to 4 and write an experiment plan for each.
 6. Results log: save each experiment and its outcome (`good`, `partial`, `failed`) in `results_log.csv`.
 
+## LLM agent demo
+
+`agent_demo.ipynb` wraps the functions above as a tool (`plan_for_composition`) and lets a small local language model (llama3.2, run with Ollama on CPU) decide when to call it.
+
+In a first version the tool took the Nb ratio as a number, and the model passed a wrong value (x = 0) on every attempt. The tool rejected it each time, because the validation is done in code and not by the model. In the current version the tool takes the alloy name (for example `FeCoCrNiNb0.3`) and the code extracts the ratio. The model then called the tool correctly, and its summary matched the tool output.
+
+This is an early experiment, not a reliable agent: the model is small, it was tested on a single request, and its answers should always be checked against the tool output. The success rate in the output refers to the nearest composition in the data (Nb = 0.25), not to the requested one.
+
+To run it, install Ollama, pull the model with `ollama pull llama3.2` and run the notebook. If requests fail with a 503 error while a proxy or VPN is active, create the client with `trust_env=False`, as done in the notebook.
+
 ## Requirements
 
-Python 3, pandas, numpy, Jupyter Notebook.
+Python 3, pandas, numpy, Jupyter Notebook. Ollama and the ollama Python package (only for the agent demo).
 
 ## Author
 
